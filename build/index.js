@@ -13072,22 +13072,33 @@ function save(_ref) {
   var attributes = _ref.attributes;
   var stars = attributes.stars,
       rating = attributes.rating,
+      size = attributes.size,
+      sizeUnit = attributes.sizeUnit,
       color = attributes.color;
   var full = Math.floor(rating);
   var half = rating % 1 === 0 ? 0 : 1;
   var empty = stars - (full + half);
+  var iconStyle = {
+    fontSize: size + sizeUnit
+  };
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", null, full ? _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(full).keys()).map(function () {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
       icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faStar"],
-      color: color
+      color: color,
+      size: size,
+      style: iconStyle
     });
   }) : null, half ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faStarHalfAlt"],
-    color: color
+    color: color,
+    size: size,
+    style: iconStyle
   }) : null, empty ? _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(empty).keys()).map(function () {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
       icon: _fortawesome_free_regular_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faStar"],
-      color: color
+      color: color,
+      size: size,
+      style: iconStyle
     });
   }) : null);
 }
