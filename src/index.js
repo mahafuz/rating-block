@@ -12,7 +12,7 @@ registerBlockType("create-block/rating", {
 		"create-block"
 	),
 	category: "widgets",
-	icon: "smiley",
+	icon: "star-filled",
 	attributes: {
 		stars: {
 			type: "number",
@@ -25,8 +25,11 @@ registerBlockType("create-block/rating", {
 			type: "string",
 		},
 		size: {
+			type: "number",
+		},
+		sizeUnit: {
 			type: "string",
-			default: "medium",
+			default: "px",
 		},
 	},
 	edit: Edit,
