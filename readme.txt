@@ -3,7 +3,7 @@ Contributors:      alam789
 Tags:              block, rate, rating, review, star,  gutenberg
 Requires at least: 5.3.2
 Tested up to:      5.4.1
-Stable tag:        0.1.0
+Stable tag:        1.0.0
 Requires PHP:      7.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -26,7 +26,7 @@ For WordPress 5.5 or above:
 
 For WordPress version < 5.5
 
-1. Upload "rating" to the `/wp-content/plugins/rating` directory.
+1. Upload "rating" to the `/wp-content/plugins/rating` directory
 2. Activate the plugin through the 'Plugins' screen in WordPress
 
 
@@ -41,5 +41,5 @@ Yes, you can use rating block with any Gutenberg compatible WordPress theme.
 
 == Changelog ==
 
-= 0.1.0 =
+= 1.0.0 =
 * Release

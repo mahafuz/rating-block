@@ -1,27 +1,27 @@
 {
-	"name": "rating",
-	"version": "0.1.0",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"author": "The WordPress Contributors",
-	"license": "GPL-2.0-or-later",
-	"main": "build/index.js",
-	"scripts": {
-		"build": "wp-scripts build",
-		"format:js": "wp-scripts format-js",
-		"lint:css": "wp-scripts lint-style",
-		"lint:js": "wp-scripts lint-js",
-		"start": "wp-scripts start",
-		"packages-update": "wp-scripts packages-update"
-	},
-	"devDependencies": {
-		"@wordpress/scripts": "^12.1.1"
-	},
-	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.30",
-		"@fortawesome/free-regular-svg-icons": "^5.14.0",
-		"@fortawesome/free-solid-svg-icons": "^5.14.0",
-		"@fortawesome/react-fontawesome": "^0.1.11",
-		"@wordpress/block-editor": "^4.3.1",
-		"@wordpress/components": "^10.0.1"
-	}
+  "name": "rating",
+  "version": "1.0.0",
+  "description": "Example block written with ESNext standard and JSX support – build step required.",
+  "author": "The WordPress Contributors",
+  "license": "GPL-2.0-or-later",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format:js": "wp-scripts format-js",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "start": "wp-scripts start",
+    "packages-update": "wp-scripts packages-update"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^12.1.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@wordpress/block-editor": "^4.3.1",
+    "@wordpress/components": "^10.0.1"
+  }
 }
