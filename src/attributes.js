@@ -16,6 +16,25 @@ const attributes = {
 		type: "string",
 		default: "px",
 	},
+	hasShadow: {
+		type: "boolean",
+		default: false,
+	},
+	offsetX: {
+		type: "number",
+		default: 0,
+	},
+	offsetY: {
+		type: "number",
+		default: 0,
+	},
+	blur: {
+		type: "number",
+		default: 0,
+	},
+	shadowColor: {
+		type: "string",
+	},
 };
 
 export default attributes;

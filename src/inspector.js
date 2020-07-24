@@ -2,6 +2,7 @@ import React from "react";
 import { InspectorControls, PanelColorSettings } from "@wordpress/block-editor";
 import {
 	PanelBody,
+	ToggleControl,
 	RangeControl,
 	ButtonGroup,
 	Button,
@@ -14,7 +15,17 @@ const UNITS = [
 ];
 
 export default function Inspector({ attributes, setAttributes }) {
-	const { rating, size, sizeUnit, color } = attributes;
+	const {
+		rating,
+		size,
+		sizeUnit,
+		color,
+		hasShadow,
+		offsetX,
+		offsetY,
+		blur,
+		shadowColor,
+	} = attributes;
 
 	const SIZE_STEP = sizeUnit === "px" ? 1 : 0.1;
 	const SIZE_MAX = sizeUnit === "px" ? 100 : 10;
@@ -53,10 +64,18 @@ export default function Inspector({ attributes, setAttributes }) {
 					min={0}
 					max={SIZE_MAX}
 				/>
+
+				<ToggleControl
+					label="Drop Shadow"
+					checked={hasShadow}
+					onChange={() => setAttributes({ hasShadow: !hasShadow })}
+					help={!hasShadow && "Doesn't support Internet Explorer"}
+				/>
 			</PanelBody>
 
 			<PanelColorSettings
 				title="Color"
+				initialOpen={false}
 				colorSettings={[
 					{
 						label: "",
@@ -65,6 +84,48 @@ export default function Inspector({ attributes, setAttributes }) {
 					},
 				]}
 			/>
+
+			{hasShadow && (
+				<PanelColorSettings
+					title="Shadow Color"
+					initialOpen={false}
+					colorSettings={[
+						{
+							label: "",
+							value: shadowColor,
+							onChange: (shadowColor) => setAttributes({ shadowColor }),
+						},
+					]}
+				/>
+			)}
+
+			{hasShadow && (
+				<PanelBody title="Shadow Settings" initialOpen={false}>
+					<RangeControl
+						label="Offset X"
+						value={offsetX}
+						onChange={(offsetX) => setAttributes({ offsetX })}
+						min={0}
+						max={10}
+					/>
+
+					<RangeControl
+						label="Offset Y"
+						value={offsetY}
+						onChange={(offsetY) => setAttributes({ offsetY })}
+						min={0}
+						max={10}
+					/>
+
+					<RangeControl
+						label="Blur"
+						value={blur}
+						onChange={(blur) => setAttributes({ blur })}
+						min={0}
+						max={10}
+					/>
+				</PanelBody>
+			)}
 		</InspectorControls>
 	);
 }

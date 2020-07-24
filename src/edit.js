@@ -9,7 +9,18 @@ import Inspector from "./inspector";
 import "./editor.scss";
 
 export default function Edit({ isSelected, attributes, setAttributes }) {
-	const { stars, rating, size, sizeUnit, color } = attributes;
+	const {
+		stars,
+		rating,
+		size,
+		sizeUnit,
+		color,
+		hasShadow,
+		offsetX,
+		offsetY,
+		blur,
+		shadowColor,
+	} = attributes;
 
 	const full = Math.floor(rating);
 	const half = rating % 1 === 0 ? 0 : 1;
@@ -17,6 +28,9 @@ export default function Edit({ isSelected, attributes, setAttributes }) {
 
 	const iconStyle = {
 		fontSize: size + sizeUnit,
+		filter: hasShadow
+			? `drop-shadow(${offsetX}px ${offsetY}px ${blur}px ${shadowColor})`
+			: undefined,
 	};
 
 	return [

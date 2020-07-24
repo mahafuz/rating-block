@@ -7,7 +7,18 @@ import {
 import { faStar as faStarEmpty } from "@fortawesome/free-regular-svg-icons";
 
 export default function save({ attributes }) {
-	const { stars, rating, size, sizeUnit, color } = attributes;
+	const {
+		stars,
+		rating,
+		size,
+		sizeUnit,
+		color,
+		hasShadow,
+		offsetX,
+		offsetY,
+		blur,
+		shadowColor,
+	} = attributes;
 
 	const full = Math.floor(rating);
 	const half = rating % 1 === 0 ? 0 : 1;
@@ -15,6 +26,9 @@ export default function save({ attributes }) {
 
 	const iconStyle = {
 		fontSize: size + sizeUnit,
+		filter: hasShadow
+			? `drop-shadow(${offsetX}px ${offsetY}px ${blur}px ${shadowColor})`
+			: undefined,
 	};
 
 	return (

@@ -12840,6 +12840,25 @@ var attributes = {
   sizeUnit: {
     type: "string",
     default: "px"
+  },
+  hasShadow: {
+    type: "boolean",
+    default: false
+  },
+  offsetX: {
+    type: "number",
+    default: 0
+  },
+  offsetY: {
+    type: "number",
+    default: 0
+  },
+  blur: {
+    type: "number",
+    default: 0
+  },
+  shadowColor: {
+    type: "string"
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (attributes);
@@ -12884,12 +12903,18 @@ function Edit(_ref) {
       rating = attributes.rating,
       size = attributes.size,
       sizeUnit = attributes.sizeUnit,
-      color = attributes.color;
+      color = attributes.color,
+      hasShadow = attributes.hasShadow,
+      offsetX = attributes.offsetX,
+      offsetY = attributes.offsetY,
+      blur = attributes.blur,
+      shadowColor = attributes.shadowColor;
   var full = Math.floor(rating);
   var half = rating % 1 === 0 ? 0 : 1;
   var empty = stars - (full + half);
   var iconStyle = {
-    fontSize: size + sizeUnit
+    fontSize: size + sizeUnit,
+    filter: hasShadow ? "drop-shadow(".concat(offsetX, "px ").concat(offsetY, "px ").concat(blur, "px ").concat(shadowColor, ")") : undefined
   };
   return [isSelected && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_inspector__WEBPACK_IMPORTED_MODULE_6__["default"], {
     attributes: attributes,
@@ -13002,7 +13027,12 @@ function Inspector(_ref) {
   var rating = attributes.rating,
       size = attributes.size,
       sizeUnit = attributes.sizeUnit,
-      color = attributes.color;
+      color = attributes.color,
+      hasShadow = attributes.hasShadow,
+      offsetX = attributes.offsetX,
+      offsetY = attributes.offsetY,
+      blur = attributes.blur,
+      shadowColor = attributes.shadowColor;
   var SIZE_STEP = sizeUnit === "px" ? 1 : 0.1;
   var SIZE_MAX = sizeUnit === "px" ? 100 : 10;
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["InspectorControls"], {
@@ -13043,8 +13073,18 @@ function Inspector(_ref) {
     step: SIZE_STEP,
     min: 0,
     max: SIZE_MAX
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["ToggleControl"], {
+    label: "Drop Shadow",
+    checked: hasShadow,
+    onChange: function onChange() {
+      return setAttributes({
+        hasShadow: !hasShadow
+      });
+    },
+    help: !hasShadow && "Doesn't support Internet Explorer"
   })), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["PanelColorSettings"], {
     title: "Color",
+    initialOpen: false,
     colorSettings: [{
       label: "",
       value: color,
@@ -13054,7 +13094,52 @@ function Inspector(_ref) {
         });
       }
     }]
-  }));
+  }), hasShadow && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__["PanelColorSettings"], {
+    title: "Shadow Color",
+    initialOpen: false,
+    colorSettings: [{
+      label: "",
+      value: shadowColor,
+      onChange: function onChange(shadowColor) {
+        return setAttributes({
+          shadowColor: shadowColor
+        });
+      }
+    }]
+  }), hasShadow && Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["PanelBody"], {
+    title: "Shadow Settings",
+    initialOpen: false
+  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
+    label: "Offset X",
+    value: offsetX,
+    onChange: function onChange(offsetX) {
+      return setAttributes({
+        offsetX: offsetX
+      });
+    },
+    min: 0,
+    max: 10
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
+    label: "Offset Y",
+    value: offsetY,
+    onChange: function onChange(offsetY) {
+      return setAttributes({
+        offsetY: offsetY
+      });
+    },
+    min: 0,
+    max: 10
+  }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
+    label: "Blur",
+    value: blur,
+    onChange: function onChange(blur) {
+      return setAttributes({
+        blur: blur
+      });
+    },
+    min: 0,
+    max: 10
+  })));
 }
 
 /***/ }),
@@ -13090,12 +13175,18 @@ function save(_ref) {
       rating = attributes.rating,
       size = attributes.size,
       sizeUnit = attributes.sizeUnit,
-      color = attributes.color;
+      color = attributes.color,
+      hasShadow = attributes.hasShadow,
+      offsetX = attributes.offsetX,
+      offsetY = attributes.offsetY,
+      blur = attributes.blur,
+      shadowColor = attributes.shadowColor;
   var full = Math.floor(rating);
   var half = rating % 1 === 0 ? 0 : 1;
   var empty = stars - (full + half);
   var iconStyle = {
-    fontSize: size + sizeUnit
+    fontSize: size + sizeUnit,
+    filter: hasShadow ? "drop-shadow(".concat(offsetX, "px ").concat(offsetY, "px ").concat(blur, "px ").concat(shadowColor, ")") : undefined
   };
   return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])("div", null, full ? _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(Array(full).keys()).map(function () {
     return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__["createElement"])(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
