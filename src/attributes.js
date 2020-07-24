@@ -1,6 +1,7 @@
 const attributes = {
 	stars: {
 		type: "number",
+		default: 5,
 	},
 	rating: {
 		type: "number",

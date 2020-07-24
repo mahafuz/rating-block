@@ -12825,7 +12825,8 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 var attributes = {
   stars: {
-    type: "number"
+    type: "number",
+    default: 5
   },
   rating: {
     type: "number",

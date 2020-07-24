@@ -2,7 +2,7 @@
   "name": "create-block/rating",
   "title": "Rating",
   "category": "widgets",
-  "icon": "smiley",
+  "keywords": ["rating", "rate", "review"],
   "description": "Example block written with ESNext standard and JSX support – build step required.",
   "textdomain": "create-block",
   "editorScript": "file:./build/index.js",
