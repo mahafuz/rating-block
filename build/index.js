@@ -12814,6 +12814,38 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./src/attributes.js":
+/*!***************************!*\
+  !*** ./src/attributes.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var attributes = {
+  stars: {
+    type: "number"
+  },
+  rating: {
+    type: "number",
+    default: 5
+  },
+  color: {
+    type: "string"
+  },
+  size: {
+    type: "number"
+  },
+  sizeUnit: {
+    type: "string",
+    default: "px"
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (attributes);
+
+/***/ }),
+
 /***/ "./src/edit.js":
 /*!*********************!*\
   !*** ./src/edit.js ***!
@@ -12913,6 +12945,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/edit.js");
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/save.js");
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./attributes */ "./src/attributes.js");
+
 
 
 
@@ -12922,26 +12956,8 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])("cre
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Rating", "create-block"),
   description: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("Example block written with ESNext standard and JSX support – build step required.", "create-block"),
   category: "widgets",
+  attributes: _attributes__WEBPACK_IMPORTED_MODULE_5__["default"],
   icon: "star-filled",
-  attributes: {
-    stars: {
-      type: "number",
-      default: 5
-    },
-    rating: {
-      type: "number"
-    },
-    color: {
-      type: "string"
-    },
-    size: {
-      type: "number"
-    },
-    sizeUnit: {
-      type: "string",
-      default: "px"
-    }
-  },
   edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
   save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
 });

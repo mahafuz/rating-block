@@ -4,6 +4,7 @@ import "./style.scss";
 
 import Edit from "./edit";
 import save from "./save";
+import attributes from "./attributes";
 
 registerBlockType("create-block/rating", {
 	title: __("Rating", "create-block"),
@@ -12,26 +13,8 @@ registerBlockType("create-block/rating", {
 		"create-block"
 	),
 	category: "widgets",
+	attributes,
 	icon: "star-filled",
-	attributes: {
-		stars: {
-			type: "number",
-			default: 5,
-		},
-		rating: {
-			type: "number",
-		},
-		color: {
-			type: "string",
-		},
-		size: {
-			type: "number",
-		},
-		sizeUnit: {
-			type: "string",
-			default: "px",
-		},
-	},
 	edit: Edit,
 	save,
 });
