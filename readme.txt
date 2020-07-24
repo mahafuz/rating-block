@@ -1,4 +1,4 @@
-=== Rating ===
+=== Rating Block ===
 Contributors:      alam789
 Tags:              block, rate, rating, review, star,  gutenberg
 Requires at least: 5.3.2
@@ -12,7 +12,7 @@ Display rating stars using gutenberg block.
 
 == Description ==
 
-**Rating** block allows you to display star rating to your WordPress site.
+**Rating Block** allows you to display star rating to your WordPress site.
 Using this plugin, you can easily create and display star rating within Gutenberg.
 **Easy to Use:** Easy to use and customize.
 

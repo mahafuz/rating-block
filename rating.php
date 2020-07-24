@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Rating
+ * Plugin Name:     Rating Block
  * Description:     Example block written with ESNext standard and JSX support – build step required.
  * Version:         1.0.0
  * Author:          The WordPress Contributors
