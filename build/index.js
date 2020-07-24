@@ -13117,6 +13117,7 @@ function Inspector(_ref) {
         offsetX: offsetX
       });
     },
+    allowReset: true,
     min: 0,
     max: 10
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
@@ -13127,6 +13128,7 @@ function Inspector(_ref) {
         offsetY: offsetY
       });
     },
+    allowReset: true,
     min: 0,
     max: 10
   }), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__["RangeControl"], {
@@ -13137,6 +13139,7 @@ function Inspector(_ref) {
         blur: blur
       });
     },
+    allowReset: true,
     min: 0,
     max: 10
   })));
