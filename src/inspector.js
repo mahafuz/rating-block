@@ -105,7 +105,6 @@ export default function Inspector({ attributes, setAttributes }) {
 						label="Offset X"
 						value={offsetX}
 						onChange={(offsetX) => setAttributes({ offsetX })}
-						allowReset
 						min={0}
 						max={10}
 					/>
@@ -114,7 +113,6 @@ export default function Inspector({ attributes, setAttributes }) {
 						label="Offset Y"
 						value={offsetY}
 						onChange={(offsetY) => setAttributes({ offsetY })}
-						allowReset
 						min={0}
 						max={10}
 					/>
@@ -123,7 +121,6 @@ export default function Inspector({ attributes, setAttributes }) {
 						label="Blur"
 						value={blur}
 						onChange={(blur) => setAttributes({ blur })}
-						allowReset
 						min={0}
 						max={10}
 					/>
