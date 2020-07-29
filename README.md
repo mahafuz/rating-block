@@ -22,6 +22,7 @@ For WordPress < 5.5
 ### Installation
 
 Rating block requires [Node.js](https://nodejs.org/) v10+ to run.
+Inside your WordPress plugin folder:
 
 ```sh
 $ git clone https://github.com/tasnimAlam/rating-block.git
