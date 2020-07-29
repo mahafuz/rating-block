@@ -2,6 +2,7 @@
   "name": "create-block/rating",
   "title": "Rating",
   "category": "widgets",
+  "icon": "star-filled",
   "keywords": ["rating", "star", "review"],
   "description": " Display rating stars using gutenberg block",
   "textdomain": "create-block",

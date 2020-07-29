@@ -9,7 +9,7 @@ import attributes from "./attributes";
 registerBlockType("create-block/rating", {
 	title: __("Rating", "create-block"),
 	description: __(
-		"Example block written with ESNext standard and JSX support – build step required.",
+		"Display rating stars using gutenberg block.",
 		"create-block"
 	),
 	category: "widgets",

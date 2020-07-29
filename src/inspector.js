@@ -1,4 +1,5 @@
 import React from "react";
+import { __ } from "@wordpress/i18n";
 import { InspectorControls, PanelColorSettings } from "@wordpress/block-editor";
 import {
 	PanelBody,
@@ -34,7 +35,7 @@ export default function Inspector({ attributes, setAttributes }) {
 		<InspectorControls key="controls">
 			<PanelBody>
 				<RangeControl
-					label="Rating"
+					label={__("Rating")}
 					value={rating}
 					onChange={(rating) => setAttributes({ rating })}
 					step={0.5}
@@ -57,7 +58,7 @@ export default function Inspector({ attributes, setAttributes }) {
 				</ButtonGroup>
 
 				<RangeControl
-					label="Size"
+					label={__("Size")}
 					value={size}
 					onChange={(size) => setAttributes({ size })}
 					step={SIZE_STEP}
@@ -66,7 +67,7 @@ export default function Inspector({ attributes, setAttributes }) {
 				/>
 
 				<ToggleControl
-					label="Drop Shadow"
+					label={__("Drop Shadow")}
 					checked={hasShadow}
 					onChange={() => setAttributes({ hasShadow: !hasShadow })}
 					help={!hasShadow && "Doesn't support Internet Explorer"}
@@ -74,7 +75,7 @@ export default function Inspector({ attributes, setAttributes }) {
 			</PanelBody>
 
 			<PanelColorSettings
-				title="Color"
+				title={__("Color")}
 				initialOpen={false}
 				colorSettings={[
 					{
@@ -87,7 +88,7 @@ export default function Inspector({ attributes, setAttributes }) {
 
 			{hasShadow && (
 				<PanelColorSettings
-					title="Shadow Color"
+					title={__("Shadow Color")}
 					initialOpen={false}
 					colorSettings={[
 						{
@@ -100,9 +101,9 @@ export default function Inspector({ attributes, setAttributes }) {
 			)}
 
 			{hasShadow && (
-				<PanelBody title="Shadow Settings" initialOpen={false}>
+				<PanelBody title={__("Shadow Settings")} initialOpen={false}>
 					<RangeControl
-						label="Offset X"
+						label={__("Offset X")}
 						value={offsetX}
 						onChange={(offsetX) => setAttributes({ offsetX })}
 						min={0}
@@ -110,7 +111,7 @@ export default function Inspector({ attributes, setAttributes }) {
 					/>
 
 					<RangeControl
-						label="Offset Y"
+						label={__("Offset Y")}
 						value={offsetY}
 						onChange={(offsetY) => setAttributes({ offsetY })}
 						min={0}
@@ -118,7 +119,7 @@ export default function Inspector({ attributes, setAttributes }) {
 					/>
 
 					<RangeControl
-						label="Blur"
+						label={__("Blur")}
 						value={blur}
 						onChange={(blur) => setAttributes({ blur })}
 						min={0}
