@@ -4,7 +4,7 @@
   "category": "widgets",
   "icon": "star-filled",
   "keywords": ["rating", "star", "review"],
-  "description": " Display rating stars using gutenberg block",
+  "description": "Display rating stars using gutenberg block",
   "textdomain": "create-block",
   "editorScript": "file:./build/index.js",
   "editorStyle": "file:./build/index.css",
