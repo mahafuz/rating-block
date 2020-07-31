@@ -36,3 +36,7 @@ For production build
 ```sh
 $ npm run build
 ```
+
+### Screenshots
+
+![screenshot-1](https://i.imgur.com/kuaYUXu.png)
