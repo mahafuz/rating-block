@@ -2,7 +2,7 @@
 Contributors:      alam789
 Tags:              block, blocks, gutenberg, editor, gutenberg blocks 
 Requires at least: 5.3.2
-Tested up to:      5.4.1
+Tested up to:      5.5
 Stable tag:        1.0.0
 Requires PHP:      7.0.0
 License:           GPL-2.0-or-later
