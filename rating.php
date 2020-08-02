@@ -3,7 +3,7 @@
  * Plugin Name:     Rating Block
  * Description:     Display rating stars using gutenberg block.
  * Version:         1.0.1
- * Author:          The WordPress Contributors
+ * Author:          alam789
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:     create-block
