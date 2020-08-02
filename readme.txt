@@ -37,9 +37,12 @@ For WordPress version < 5.5
 Yes, you can use rating block with any Gutenberg compatible WordPress theme.
 
 == Screenshots ==
-
+1. rating with controllers
 
 == Changelog ==
+
+= 1.0.1 =
+* Add: Internatianalization
 
 = 1.0.0 =
 * Release
