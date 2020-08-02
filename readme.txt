@@ -1,6 +1,6 @@
 === Rating Block ===
 Contributors:      alam789
-Tags:              block, rate, rating, review, star,  gutenberg
+Tags:              block, blocks, gutenberg, editor, gutenberg blocks 
 Requires at least: 5.3.2
 Tested up to:      5.4.1
 Stable tag:        1.0.0
