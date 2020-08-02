@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///style.scss"],"names":[],"mappings":"AAAA;EACE,aAAa,EAAE;;AAEjB;EACE,WAAW;EACX,UAAU,EAAE","file":"style-index.css","sourcesContent":[".wp-block-create-block-rating {\n  display: flex; }\n\n.wp-block-create-block-rating svg {\n  height: 1em;\n  width: 1em; }\n"],"sourceRoot":""}

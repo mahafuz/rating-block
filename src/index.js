@@ -5,6 +5,7 @@ import "./style.scss";
 import Edit from "./edit";
 import save from "./save";
 import attributes from "./attributes";
+import example from "./example";
 
 registerBlockType("create-block/rating", {
 	title: __("Rating", "create-block"),
@@ -17,4 +18,5 @@ registerBlockType("create-block/rating", {
 	icon: "star-filled",
 	edit: Edit,
 	save,
+	example,
 });
