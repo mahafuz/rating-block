@@ -4,7 +4,7 @@
  * Description:     Display rating stars using gutenberg block.
  * Plugin URI:      https://github.com/tasnimAlam/rating-block
  * Version:         1.0.1
- * Author:          alam789
+ * Author:          Md. Tasnim Alam
  * Author URI:      https://github.com/tasnimAlam/
  * License:         GPL-2.0-or-later
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
